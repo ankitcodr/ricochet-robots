@@ -1,5 +1,4 @@
 var boardSize = 16;
-var playerCount = 5;
 var colors = {
     RED: 0,
     BLUE: 1,
@@ -10,11 +9,6 @@ var colors = {
     NUMCOLORS: 6
 }
 var colorNames = ["crimson", "steelblue", "silver", "green", "yellowgreen"];
-var cssColors = ["Crimson", "SteelBlue", "DimGray", "DarkOliveGreen", "Wheat", "Cornsilk"];
-var gameBorderColor = "Black";
-var gameBorderSize = "2";
-var blockBorderColor = "Grey";
-var blockBorderSize = "1";
 var timerVar;
 
 // Load the updateText on first load for now
@@ -24,7 +18,7 @@ window.onload = function () {
 };
 
 function helpButton() {
-    var txt = "1. Dots are Robots.\n2. Chip with G is Goal.\n3. Robots can go horizontal or vertical and can't jump over walls or players.\n4. Goal: Take same-colored Robot to Goal in less steps than other players.\n5. Check Result by clicking \"Show Solution\"";
+    var txt = "1. Dots are Robots.\n2. Chip with G is Goal.\n3. Robots can go horizontal or vertical and can't jump over walls or players.\n4. Robots can also not change direction until they hit a wall or another Robot.\n5. Goal: Take same-colored Robot to Goal in less steps than other players.\n6. Check Result by clicking \"Show Solution\"";
     confirm(txt);
 };
 
@@ -33,10 +27,6 @@ function newGame() {
 }
 
 function loadGame() {
-
-}
-
-function help() {
 
 }
 
