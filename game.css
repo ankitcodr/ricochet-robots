@@ -1,0 +1,83 @@
+.grid {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 0px solid black;
+  border-radius: 0.25em;
+  box-shadow: 0 0 0 0.25em black;
+  margin-top: 1em;
+}
+
+.cell {
+  border: 0.05em solid grey;
+  height: 3em;
+  width: 3em;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.cell-center {
+    background-color: antiquewhite;
+}
+
+.cell-top-border {
+  border-top: 0.2em solid black;
+}
+
+.cell-bottom-border {
+  border-bottom: 0.2em solid black;
+}
+
+.cell-left-border {
+  border-left: 0.2em solid black;
+}
+
+.cell-right-border {
+  border-right: 0.2em solid black;
+}
+
+.red-player {
+  height: 25px;
+  width: 25px;
+  background-color: crimson;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.blue-player {
+  height: 25px;
+  width: 25px;
+  background-color: steelblue;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.green-player {
+  height: 25px;
+  width: 25px;
+  background-color: green;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.silver-player {
+  height: 25px;
+  width: 25px;
+  background-color: silver;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.yellow-player {
+  height: 25px;
+  width: 25px;
+  background-color: yellowgreen;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.cell-chip {
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  display: inline-block;
+}

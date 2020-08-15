@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="http://cdn.rawgit.com/davidbau/seedrandom/released/seedrandom.min.js"></script>
-        <title>Ricochet Robots</title>
-    </head>
 
-    <body>
-        <div id="upperDiv">
-            <button type="button" onclick="newGame();">New Game</button>
-            <button type="button" onclick="loadGame();">Load Game</button>
-            <button id="AnswersButton" type="button" onclick="showAnswers();" value="hidden">Show Answers</button>
-            <button id="ToggleInvertedButton" type="button" onclick="toggleInvertedText();" value="disabled">Inverted Text</button>
-            <Text id="Text1"></Text>
-        </div>
+<head>
+    <link rel="stylesheet" type="text/css" href="game.css">
+    <script src="http://cdn.rawgit.com/davidbau/seedrandom/released/seedrandom.min.js"></script>
+    <script src="./game.js"></script>
+    <title>Ricochet Robots</title>
+    <link rel="icon" href="favicon.png" type="image/png" sizes="16x16">
+</head>
 
-        <div id="tableDiv">
-            <table id="Table1"> </table>
-        </div>
-    </body>
+
+<body>
+    <div id="upperDiv">
+        <button type="button" onclick="newGame();">New Game</button>
+        <button type="button" onclick="loadGame();">Load Game</button>
+        <button id="SolutionButton" type="button" onclick="showSolution();" value="hidden">Show Solution</button>
+        <Text id="Moves"></Text>
+        <button type="button" onclick="helpButton();">Help</button>
+        Game Room = <Text id="GameId"></Text>
+        Timer = <Text id="Timer"></Text>
+    </div>
+
+    <div id="tableDiv">
+        <table id="GameTable"> </table>
+    </div>
+</body>
 
 </html>
