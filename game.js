@@ -1,4 +1,4 @@
-var boardSize = 16;
+var boardSize = 8;
 var colors = {
     RED: 0,
     BLUE: 1,
@@ -14,7 +14,7 @@ var timerVar;
 // Load the updateText on first load for now
 window.onload = function () {
     // newSeed();
-    newGame();
+    newGame8();
 };
 
 function helpButton() {
@@ -22,7 +22,18 @@ function helpButton() {
     confirm(txt);
 };
 
-function newGame() {
+function newGame8() {
+    boardSize = 8;
+    generateGame();
+}
+
+function newGame10() {
+    boardSize = 10;
+    generateGame();
+}
+
+function newGame12() {
+    boardSize = 12;
     generateGame();
 }
 
@@ -62,7 +73,7 @@ function startTimer() {
 }
 
 function drawBoard() {
-    var rows = boardSize / 2;
+    var rows = boardSize;
     var cols = rows;
 
     // var top_walls = placeWalls();
@@ -119,27 +130,28 @@ function drawBoard() {
                 td.classList.add("cell-left-border");
             }
 
+            // Place walls
 
             // Place Players
             var player = "<span>";
-            if (players["RED"] === i * 8 + j) {
+            if (players["RED"] === i * cols + j) {
                 player = "<span class = \"red-player\">";
             }
-            if (players["BLUE"] === i * 8 + j) {
+            if (players["BLUE"] === i * cols + j) {
                 player = "<span class = \"blue-player\">";
             }
-            if (players["GREEN"] === i * 8 + j) {
+            if (players["GREEN"] === i * cols + j) {
                 player = "<span class = \"green-player\">";
             }
-            if (players["SILVER"] === i * 8 + j) {
+            if (players["SILVER"] === i * cols + j) {
                 player = "<span class = \"silver-player\">";
             }
-            if (players["YELLOW"] === i * 8 + j) {
+            if (players["YELLOW"] === i * cols + j) {
                 player = "<span class = \"yellow-player\">";
             }
 
             // Place Chip
-            if (i * 8 + j === chipLocation) {
+            if (i * cols + j === chipLocation) {
                 player = "<span class = \"cell-chip\" style = \"background-color: ";
                 player += colorNames[chipColor];
                 player += "\">G";
